@@ -1,0 +1,18 @@
+<html>
+    <head>
+     </head>
+        <body>
+              <script data-main="/app" src="/node_modules/requirejs/require.js"></script>
+              <form id="dataSampleForm" name="dataSampleForm">
+                  <div ng-controller="indexController">
+                      
+                      <label for="dateInput">insert date:</label>
+                      <input type="text" id="dateTbx" name="dateTbx" dateformat-Validation="MM/DD/YYYY" ng-model="dateSample">
+                      <br/>              
+                       <span ng-show="dataSampleForm.dateTbx.$error.dateformatValidation && (dataSampleForm.dateTbx.$touched || dataSampleForm.$submitted)">
+                           Invalid date format
+                       </span>
+                  </div>
+              </form>
+        </body>
+</html>
