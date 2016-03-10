@@ -11,9 +11,7 @@ module.exports = function(config) {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: [
-      'jasmine',
-      'chai-as-promised',
-      'chai'
+      'jasmine'
     ],
 
 
@@ -32,14 +30,13 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'DateFormatDirective.js': 'coverage',
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'junit', 'coverage'],
+    reporters: ['progress'],
 
 
     // web server port
@@ -72,25 +69,10 @@ module.exports = function(config) {
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
 
-    junitReporter: {
-      outputDir: 'test/reports', // results will be saved as $outputDir/$browserName.xml
-      outputFile: undefined, // if included, results will be saved as $outputDir/$browserName/$outputFile
-      suite: '' // suite will become the package name attribute in xml testsuite element
-    },
-
-    coverageReporter: {
-      type: 'lcov',
-      dir: 'test/reports',
-      subdir: '.'
-    },
-
     plugins: [
         'karma-jasmine',
         'karma-chai',
-        'karma-chai-as-promised',
-        'karma-phantomjs-launcher',
-        'karma-coverage',
-        'karma-junit-reporter'
+        'karma-phantomjs-launcher'
     ]
   })
 }
