@@ -10,8 +10,8 @@ node_js:
 #sudo: required
 
 before_install:
-  - npm install -g karma-cli
-  - npm install -g karma-junit-reporter karma-ng-scenario karma-junit-reporter karma-phantomjs-launcher karma-coverage karma-chai-as-promised karma-jasmine
+  - npm install karma-cli
+  - npm install karma-junit-reporter karma-ng-scenario karma-junit-reporter karma-phantomjs-launcher karma-coverage karma-chai-as-promised karma-jasmine
 
 script:
   - cd test/
