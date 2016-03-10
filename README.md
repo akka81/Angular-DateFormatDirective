@@ -1,5 +1,6 @@
 # Angular-DateFormatDirective ![Build Status](https://travis-ci.org/GruppoReti/Angular-DateFormatDirective.svg?branch=master)
 ###Angular Directive to validate date input formats
+###### Thanks to @Biancini for travis and unit testing
 
 this directive acts on text input or on kendo date pickers and validates the format of the inserted data.
 It's also possible to configure and validate before and after constraints using others date input controls
